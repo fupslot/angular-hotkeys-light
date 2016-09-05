@@ -91,7 +91,7 @@
       123: 'f12'
     };
 
-    this.$get = ['$rootScope', function($rootScope) {
+    this.$get = ['$rootScope', '$window', function($rootScope, $window) {
 
       var wrapWithApply = function (fn) {
         return function(event, args) {
@@ -138,8 +138,8 @@
        */
       Object.defineProperty(Hotkeys.prototype, 'initialize', {
         value: function initialize() {
-          window.addEventListener('keydown', this._onKeydown, true);
-          window.addEventListener('keyup', this._onKeyup, true);
+          $window.addEventListener('keydown', this._onKeydown, true);
+          $window.addEventListener('keyup', this._onKeyup, true);
         }
       });
 

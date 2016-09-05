@@ -1,6 +1,6 @@
 {
   "name": "angular-hotkeys-light",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Keyboard shortcuts for your Angular applications",
   "main": "angular-hotkeys-light.min.js",
   "repository": {
