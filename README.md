@@ -50,7 +50,7 @@ Creates `hotkey` object based on given `object`
 * `callback`: {Function} This function will be invoked when `key` is pressed. Passes two arguments: an event that triggered `callback` and `args` object **required**
 * `args`: {Object} This object will be pass to `callback` as a second argument
 
-####Note: Do not call `$scope.$apply()` manually within a hotkey callback.
+#### Note: Do not call `$scope.$apply()` manually within a hotkey callback.
 
 #### Hotkeys.registerHotkey(\<hotkey\>): Array.\<hotkey\>
 This method registers the hotkey object in the global table. If the given combination already exist it will append the hotkey to it. In the case when a combination has multiple callbacks they will be invoked in FIFO way.
