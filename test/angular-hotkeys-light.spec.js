@@ -250,7 +250,7 @@ describe('Hotkeys', function() {
     invokeHotkey({combo: '+', code: '+', which: 107});
     invokeHotkey({combo: '-', code: '-', which: 109});
     invokeHotkey({combo: '.', code: '.', which: 110});
-    invokeHotkey({combo: '/', code: '/', which: 111});
+    invokeHotkey({combo: '/', code: '/', which: 191});
   });
 });
 
