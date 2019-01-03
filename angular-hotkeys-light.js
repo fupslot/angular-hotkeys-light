@@ -107,7 +107,7 @@
         this.context = params.context || null;
         this.callback = params.callback;
         this.args = params.args;
-        this.onKeyUp = false;
+        this.onKeyUp = params.onKeyUp || false;
       };
 
       HotKey.prototype.clone = function() {
@@ -183,10 +183,10 @@
        * @private
        */
       Object.defineProperty(Hotkeys.prototype, '_onKeyup', {
-        value: function _onKeyDown(event) {
+        value: function _onKeyUp(event) {
           var keyString = this.keyStringFromEvent(event);
           if (this._hotkeysUp[keyString]) {
-            this._invokeHotkeyHandlers(this._hotkeysUp[keyString], keyString);
+            this._invokeHotkeyHandlers(event, keyString, this._hotkeysUp[keyString]);
           }
         },
         writable: true
